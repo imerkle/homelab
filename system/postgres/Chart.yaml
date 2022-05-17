@@ -1,0 +1,7 @@
+apiVersion: v2
+name: zalando-postgres-ui
+version: 0.0.0
+dependencies:
+  - name: zalando-postgres-ui
+    version: 1.8.0
+    repository: https://opensource.zalando.com/postgres-operator/charts/postgres-operator-ui

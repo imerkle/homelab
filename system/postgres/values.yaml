@@ -1,0 +1,17 @@
+envs:
+  resourcesVisible: "True"
+  targetNamespace: # Show all namespaces
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      auth_request_set $required_groups 'admin';
+  hosts:
+    - host: "postgres-operator.pub.172-28-0-3.nip.io"
+      paths: [""]
+    - host: "postgres-operator.home.172-28-0-3.nip.io"
+      paths: [""]
+  tls:
+    - hosts:
+        - "postgres-operator.pub.172-28-0-3.nip.io"
+        - "postgres-operator.home.172-28-0-3.nip.io"
