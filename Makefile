@@ -28,5 +28,5 @@ docs:
 	make -C docs
 
 dev:
-	make -C metal cluster env=dev
+	make -C metal k3d cluster env=dev
 	make -C bootstrap
